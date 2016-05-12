@@ -1,4 +1,4 @@
-# Sömotor-företag
+# Sökmotor-företag
 Prototyp för en ny startsida som i realtid designas om och förstärker sökorden som matats in.
 ##### Demo:
 http://thomaskjellberg.se/techtest/
