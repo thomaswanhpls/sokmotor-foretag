@@ -1,0 +1,140 @@
+@import 'bourbon/bourbon';
+@import 'partials/reset';
+@import 'partials/mixins';
+
+
+
+.header {
+	height: 4vh;
+	background: #FF3800;
+}
+
+.posRel {
+	position: relative;
+}
+
+.posAbs {
+	position: absolute;
+}
+
+.main-content {
+	@include center();
+	text-align: center;
+	width: 25em;
+	height: 15em;
+	background: white;
+	padding: 2.5em;
+	color: #FF3800;
+	border-top: 1em solid #FF3800;
+	z-index: 100;
+	h1 {
+		font-family: 'helvetica';
+		@include font-size(24px);
+		margin: 0 0 1em 0;
+	} 
+	p {
+		margin: 0 0 2em 0;
+	}
+	li {
+		padding: 1em;
+		background: rgba(0,255,0,.3);
+		&:hover {
+			background: rgba(0,255,0,1)
+		}
+	}
+}
+
+.flex-container {
+	  display: -webkit-flex; /* Safari */
+	  display: flex;
+	  -webkit-flex-direction: column; /* Safari */
+	  flex-direction:         column;
+	  -webkit-flex-wrap: nowrap; /* Safari */
+	  flex-wrap:         nowrap;
+	  -webkit-align-items: stretch; /* Safari */
+	  align-items:         stretch;
+	  width: 100vw;
+	  height: 96vh;
+}
+
+.obox {
+	display: flex;
+	-webkit-flex: 1 1 auto; /* Safari */
+	flex: 1 1 10em;  
+	
+	.ibox {
+		-webkit-flex: 1 1 auto; /* Safari */
+		flex: 1 1 10em; 
+		perspective: 1000;
+
+		&:hover {
+			.flipper {
+				transform: rotateY(180deg);
+			}
+		}
+
+		.flipper {
+			-webkit-transition: 0.6s;
+			-webkit-transform-style: preserve-3d;
+
+			-moz-transition: 0.6s;
+			-moz-transform-style: preserve-3d;
+		  
+		  -o-transition: 0.6s;
+			-o-transform-style: preserve-3d;
+
+			transition: 0.6s;
+			transform-style: preserve-3d;
+
+			position: relative;
+			height: 100%;
+		}
+
+		.front, .back {
+			-webkit-backface-visibility: hidden;
+			-moz-backface-visibility: hidden;
+		  -o-backface-visibility: hidden;
+			backface-visibility: hidden;
+
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+
+		.back {
+			-webkit-transform: rotateY(180deg);
+			-moz-transform: rotateY(180deg);
+		  -o-transform: rotateY(180deg);
+			transform: rotateY(180deg);
+
+			padding: .5em;
+			background: #f8f8f8;
+			cursor: pointer;
+			* {
+				margin-bottom: 5px;
+			}
+			h1 {
+				font-family: helvetica;
+				font-size: 14px;
+				font-weight: bolder;
+				
+			}
+			p {
+				font-size: 12px;
+			}
+			p+p {
+				font-weight: bolder;
+			}
+		}
+	}
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

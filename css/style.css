@@ -1,0 +1,201 @@
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+body {
+  line-height: 1; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+nav ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none; }
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold; }
+
+del {
+  text-decoration: line-through; }
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0; }
+
+input, select {
+  vertical-align: middle; }
+
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+.header {
+  height: 4vh;
+  background: #FF3800; }
+
+.posRel {
+  position: relative; }
+
+.posAbs {
+  position: absolute; }
+
+.main-content {
+  left: 50%;
+  top: 50%;
+  bottom: auto;
+  right: auto;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  text-align: center;
+  width: 25em;
+  height: 15em;
+  background: white;
+  padding: 2.5em;
+  color: #FF3800;
+  border-top: 1em solid #FF3800;
+  z-index: 100; }
+  .main-content h1 {
+    font-family: 'helvetica';
+    font-size: 24px;
+    font-size: 1.5rem;
+    margin: 0 0 1em 0; }
+  .main-content p {
+    margin: 0 0 2em 0; }
+  .main-content li {
+    padding: 1em;
+    background: rgba(0, 255, 0, 0.3); }
+    .main-content li:hover {
+      background: lime; }
+
+.flex-container {
+  display: -webkit-flex;
+  /* Safari */
+  display: flex;
+  -webkit-flex-direction: column;
+  /* Safari */
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  /* Safari */
+  flex-wrap: nowrap;
+  -webkit-align-items: stretch;
+  /* Safari */
+  align-items: stretch;
+  width: 100vw;
+  height: 96vh; }
+
+.obox {
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  /* Safari */
+  flex: 1 1 10em; }
+  .obox .ibox {
+    -webkit-flex: 1 1 auto;
+    /* Safari */
+    flex: 1 1 10em;
+    perspective: 1000; }
+    .obox .ibox:hover .flipper {
+      transform: rotateY(180deg); }
+    .obox .ibox .flipper {
+      -webkit-transition: 0.6s;
+      -webkit-transform-style: preserve-3d;
+      -moz-transition: 0.6s;
+      -moz-transform-style: preserve-3d;
+      -o-transition: 0.6s;
+      -o-transform-style: preserve-3d;
+      transition: 0.6s;
+      transform-style: preserve-3d;
+      position: relative;
+      height: 100%; }
+    .obox .ibox .front, .obox .ibox .back {
+      -webkit-backface-visibility: hidden;
+      -moz-backface-visibility: hidden;
+      -o-backface-visibility: hidden;
+      backface-visibility: hidden;
+      position: absolute;
+      top: 0;
+      left: 0; }
+    .obox .ibox .back {
+      -webkit-transform: rotateY(180deg);
+      -moz-transform: rotateY(180deg);
+      -o-transform: rotateY(180deg);
+      transform: rotateY(180deg);
+      padding: .5em;
+      background: #f8f8f8;
+      cursor: pointer; }
+      .obox .ibox .back * {
+        margin-bottom: 5px; }
+      .obox .ibox .back h1 {
+        font-family: helvetica;
+        font-size: 14px;
+        font-weight: bolder; }
+      .obox .ibox .back p {
+        font-size: 12px; }
+      .obox .ibox .back p + p {
+        font-weight: bolder; }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+/*# sourceMappingURL=style.css.map */
